@@ -91,7 +91,9 @@ fi
 if [[ "$(id -u)" == "0" ]]; then
     # If requested and running as root, mutate the ownership of bind-mounts
     if [[ -n "$TAKE_FILE_OWNERSHIP" ]]; then
-        chown -R elasticsearch:root /usr/share/elasticsearch/{data,logs}
+        chown -R elasticsearch:elasticsearch /var/lib/elasticsearch
+        chown -R elasticsearch:elasticsearch /var/log/elasticsearch
+        chown -R elasticsearch:elasticsearch /etc/elasticsearch
     fi
 fi
 
