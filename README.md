@@ -1,5 +1,8 @@
 # Docker Elasticsearch Ubuntu
 
+[![Automated Build](https://img.shields.io/docker/automated/phihos/elasticsearch-ubuntu.svg)](https://hub.docker.com/r/phihos/elasticsearch-ubuntu/)
+[![Docker Build Status](https://img.shields.io/docker/build/phihos/elasticsearch-ubuntu.svg)](https://hub.docker.com/r/phihos/elasticsearch-ubuntu/)
+
 Elasticsearch Docker image with based on Ubuntu Linux.
 
 ## Why
