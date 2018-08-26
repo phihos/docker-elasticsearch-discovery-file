@@ -103,4 +103,8 @@ do
     /usr/share/elasticsearch/bin/elasticsearch-plugin install --batch "$i"
 done
 
+export DATA_DIR=/var/lib/elasticsearch
+export CONF_DIR=/etc/elasticsearch
+export PID_DIR=/var/run/elasticsearch
+
 run_as_other_user_if_needed /usr/share/elasticsearch/bin/elasticsearch "${es_opts[@]}"
