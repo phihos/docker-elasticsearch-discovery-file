@@ -4,6 +4,10 @@ set -e
 # Files created by Elasticsearch should always be group writable too
 umask 0002
 
+export DATA_DIR=/var/lib/elasticsearch
+export CONF_DIR=/etc/elasticsearch
+export PID_DIR=/var/run/elasticsearch
+
 run_as_other_user_if_needed() {
     if [[ "$(id -u)" == "0" ]]; then
         # If running as root, drop to specified UID and run command
@@ -102,9 +106,5 @@ do
     # install plugins
     /usr/share/elasticsearch/bin/elasticsearch-plugin install --batch "$i"
 done
-
-export DATA_DIR=/var/lib/elasticsearch
-export CONF_DIR=/etc/elasticsearch
-export PID_DIR=/var/run/elasticsearch
 
 run_as_other_user_if_needed /usr/share/elasticsearch/bin/elasticsearch "${es_opts[@]}"
