@@ -18,6 +18,7 @@ RUN chgrp 0 /usr/local/bin/docker-entrypoint.sh && \
     chmod g=u /etc/passwd && \
     chmod 0775 /usr/local/bin/docker-entrypoint.sh
 
+RUN /usr/share/elasticsearch/bin/elasticsearch-plugin install --batch xpack
 RUN /usr/share/elasticsearch/bin/elasticsearch-plugin install --batch ingest-user-agent
 RUN /usr/share/elasticsearch/bin/elasticsearch-plugin install --batch ingest-geoip
 
