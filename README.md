@@ -7,7 +7,7 @@ Elasticsearch Docker image with based on Ubuntu Linux.
 
 ## Why
 
-The official Elasticsearch image has moved away from Docker Hub into another registry. There we hvae no *latest* tag for images.
+The official Elasticsearch image has moved away from Docker Hub into another registry. There we have no *latest* tag for images.
 Also currently no option exists for installing plugins and running the container in one go.
 This image attempts to provide an up-to-date version of Elasticsearch on Docker Hub with automated builds while maintaining compliance with the official image docs.
 
